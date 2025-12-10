@@ -25,21 +25,6 @@ const routes = {
     const node = tpl.content.cloneNode(true);
     app.appendChild(node);
   
-    // Sandbox interactivity
-    const blob = app.querySelector("#sandbox-blob");
-    if (blob) {
-      blob.addEventListener("mousemove", (event) => {
-        const rect = blob.getBoundingClientRect();
-        const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
-        const y = ((event.clientY - rect.top) / rect.height - 0.5) * 10;
-        blob.style.transform = `translate(${x}px, ${y}px) scale(1.02)`;
-      });
-  
-      blob.addEventListener("mouseleave", () => {
-        blob.style.transform = "translate(0,0) scale(1)";
-      });
-    }
-  
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   
