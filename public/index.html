@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vishaag | Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="brand" data-link>VS<span class="brand-dot">.</span></a>
+
+        <nav class="nav">
+          <a href="/" data-link>Home</a>
+          <a href="/blog" data-link>Blog</a>
+          <a href="/projects" data-link>Projects</a>
+          <a href="/about" data-link>About</a>
+          <a href="/contact" data-link>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app" class="app-root"></main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> Vishaag · Built by hand</small>
+    </footer>
+
+    <!-- HOME -->
+    <template id="view-home">
+      <section class="page">
+        <div class="hero-layout">
+          <div class="hero-main">
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Frontend · Yoga · CS</span>
+            </div>
+
+            <h1 class="page-title">Hi, I’m Vishaag.</h1>
+            <p class="page-subtitle">
+              Frontend-first engineer exploring deep CS and inner work.  
+              This site is my lab.
+            </p>
+
+            <div class="chip-row">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Playground</span>
+              <span class="chip">Yoga</span>
+              <span class="chip">Systems</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="/projects" data-link class="btn btn-primary">View projects →</a>
+              <a href="/blog" data-link class="btn btn-ghost">Read notes</a>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <p class="hero-kv">
+              /now<br />
+              • learning: CS fundamentals<br />
+              • training: gym, yoga<br />
+              • building: experiments<br />
+            </p>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <!-- BLOG -->
+    <template id="view-blog">
+      <section class="page">
+        <h1 class="page-title">Blog</h1>
+        <p class="page-subtitle">
+          Rough notes on engineering, yoga, systems, and life design.
+        </p>
+
+        <div class="card-list">
+          <article class="card">
+            <h3>Why this site is a playground</h3>
+            <p>Notes on building by hand instead of optimizing prematurely.</p>
+            <div class="card-meta">Draft</div>
+          </article>
+
+          <article class="card">
+            <h3>Things I want from my work</h3>
+            <p>
+              Freedom, depth, and meaningful contribution without burnout.
+            </p>
+            <div class="card-meta">Notes</div>
+          </article>
+        </div>
+      </section>
+    </template>
+
+    <!-- PROJECTS -->
+    <template id="view-projects">
+      <section class="page">
+        <h1 class="page-title">Projects</h1>
+        <p class="page-subtitle">Tiny experiments and ideas I’m exploring.</p>
+
+        <div class="card-list">
+          <article class="card">
+            <h3>This portfolio</h3>
+            <p>
+              Hand-rolled single-page site. No framework. No build step.  
+              A personal exercise in clarity.
+            </p>
+            <div class="card-meta">HTML · CSS · JS</div>
+            <a href="/" data-link class="btn btn-ghost btn-sm">Open →</a>
+          </article>
+
+          <article class="card">
+            <h3>TestProjectGO</h3>
+            <p>A dedicated sandbox route for wild UI experiments.</p>
+            <div class="card-meta">Sandbox</div>
+            <a href="/projects/testprojectGO" data-link class="btn btn-ghost btn-sm">Open →</a>
+          </article>
+        </div>
+      </section>
+    </template>
+
+    <!-- ABOUT -->
+    <template id="view-about">
+      <section class="page">
+        <h1 class="page-title">About</h1>
+        <p class="page-subtitle">A bit about me and my interests.</p>
+
+        <div class="card">
+          <h3>Who</h3>
+          <p>
+            I’m a frontend engineer who values clarity, deep thinking, and slow,
+            deliberate creation.  
+          </p>
+          <p>
+            Outside tech: yoga, meditation, strength, nature.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>This site</h3>
+          <p>
+            This is not a polished portfolio — it’s a living playground where I
+            build freely, slowly, intentionally.
+          </p>
+        </div>
+      </section>
+    </template>
+
+    <!-- CONTACT -->
+    <template id="view-contact">
+      <section class="page">
+        <h1 class="page-title">Reach me</h1>
+        <p class="page-subtitle">
+          I respond best to thoughtful messages.
+        </p>
+
+        <div class="card">
+          <h3>Email</h3>
+          <p>
+            <a class="btn btn-primary btn-sm" href="mailto:your@email">
+              your@email
+            </a>
+          </p>
+
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/yourhandle" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+    </template>
+
+    <!-- SANDBOX -->
+    <template id="view-sandbox">
+      <section class="page">
+        <h1 class="page-title">TestProjectGO</h1>
+        <p class="page-subtitle">
+          A route dedicated to experiments.
+        </p>
+
+        <div class="card">
+          <h3>Hover experiment</h3>
+          <p>Move your cursor over the field below.</p>
+          <div id="sandbox-blob" class="sandbox-blob"></div>
+        </div>
+      </section>
+    </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
